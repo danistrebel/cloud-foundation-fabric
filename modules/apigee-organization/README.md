@@ -8,10 +8,10 @@ This module allows managing a single Apigee organization and its environments an
 
 ```hcl
 module "apigee-organization" {
-  source     = "./modules/apigee-organization"
-  project_id = "my-project"
-  analytics_region = "us-central1"
-  runtime_type = "CLOUD"
+  source             = "./modules/apigee-organization"
+  project_id         = "my-project"
+  analytics_region   = "us-central1"
+  runtime_type       = "CLOUD"
   authorized_network = "my-vpc"
   apigee_environments = [
     "eval1",
@@ -23,7 +23,7 @@ module "apigee-organization" {
         "eval1",
         "eval2"
       ]
-      hostnames    = [
+      hostnames = [
         "eval.api.example.com"
       ]
     }
@@ -36,11 +36,11 @@ module "apigee-organization" {
 
 ```hcl
 module "apigee-organization" {
-  source     = "./modules/apigee-organization"
-  project_id = "my-project"
-  analytics_region = "us-central1"
-  runtime_type = "CLOUD"
-  authorized_network = "my-vpc"
+  source                  = "./modules/apigee-organization"
+  project_id              = "my-project"
+  analytics_region        = "us-central1"
+  runtime_type            = "CLOUD"
+  authorized_network      = "my-vpc"
   database_encryption_key = "my-data-key"
   apigee_environments = [
     "dev1",
@@ -54,7 +54,7 @@ module "apigee-organization" {
         "dev1",
         "dev2"
       ]
-      hostnames    = [
+      hostnames = [
         "dev.api.example.com"
       ]
     }
@@ -63,7 +63,7 @@ module "apigee-organization" {
         "test1",
         "test2"
       ]
-      hostnames    = [
+      hostnames = [
         "test.api.example.com"
       ]
     }
@@ -76,10 +76,10 @@ module "apigee-organization" {
 
 ```hcl
 module "apigee-organization" {
-  source     = "./modules/apigee-organization"
-  project_id = "my-project"
+  source           = "./modules/apigee-organization"
+  project_id       = "my-project"
   analytics_region = "us-central1"
-  runtime_type = "HYBRID"
+  runtime_type     = "HYBRID"
   apigee_environments = [
     "eval1",
     "eval2"
@@ -90,7 +90,7 @@ module "apigee-organization" {
         "eval1",
         "eval2"
       ]
-      hostnames    = [
+      hostnames = [
         "eval.api.example.com"
       ]
     }
